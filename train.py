@@ -76,10 +76,8 @@ def train(is_load):
     model = tflearn.DNN(net)
 
     if is_load:
-        print('here')
         model.load("model.tflearn")
     else:
-        print('there')
         model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
         model.save("model.tflearn")
 
